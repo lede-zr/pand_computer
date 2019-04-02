@@ -531,3 +531,51 @@ Diff is 763 characters long. Set self.maxDiff to None to see it.
 2019-04-01 17:29:03,116-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第1条用例：正确登录
 2019-04-01 17:29:03,447-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第2条用例：正常投资
 2019-04-01 17:29:04,347-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第3条用例：不输入金额
+2019-04-02 15:14:50,670-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第1条用例：正确注册
+2019-04-02 15:14:50,769-ERROR-log_msg.py-root-38-日志信息：{'msg': '注册成功', 'data': None, 'status': 1, 'code': '10001'} != {'msg': '手机号码已被注册', 'data': None, 'status': 0, 'code': '20110'}
+- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
+?             ---                           --             ^
+
++ {'code': '20110', 'data': None, 'msg': '手机号码已被注册', 'status': 0}
+?           +++                           ++++++               ^
+
+2019-04-02 15:14:51,014-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号码已被注册', 'data': None, 'status': 0, 'code': '20110'}
+2019-04-02 15:14:51,027-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第2条用例：错误的手机号
+2019-04-02 15:14:51,360-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号码格式不正确', 'data': None, 'status': 0, 'code': '20109'}
+2019-04-02 15:14:51,361-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第3条用例：错误的密码
+2019-04-02 15:14:51,692-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '密码长度必须为6~18', 'data': None, 'status': 0, 'code': '20108'}
+2019-04-02 15:14:51,693-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第4条用例：已注册的手机号
+2019-04-02 15:14:52,019-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号码已被注册', 'data': None, 'status': 0, 'code': '20110'}
+2019-04-02 15:14:52,020-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第5条用例：手机号为空
+2019-04-02 15:14:52,352-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号不能为空', 'data': None, 'status': 0, 'code': '20103'}
+2019-04-02 15:14:52,353-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第6条用例：正确登录
+2019-04-02 15:14:52,657-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '登录成功', 'data': None, 'status': 1, 'code': '10001'}
+2019-04-02 15:14:52,658-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第7条用例：错误的用户名
+2019-04-02 15:14:53,002-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '用户名或密码错误', 'data': None, 'status': 0, 'code': '20111'}
+2019-04-02 15:14:53,003-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第8条用例：错误的密码
+2019-04-02 15:14:53,306-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '用户名或密码错误', 'data': None, 'status': 0, 'code': '20111'}
+2019-04-02 15:14:53,308-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第9条用例：空密码
+2019-04-02 15:14:53,602-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '密码不能为空', 'data': None, 'status': 0, 'code': '20103'}
+2019-04-02 15:14:53,603-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第10条用例：空用户名
+2019-04-02 15:14:53,921-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号不能为空', 'data': None, 'status': 0, 'code': '20103'}
+2019-04-02 15:14:53,922-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第1条用例：未登录充值
+2019-04-02 15:14:54,303-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '抱歉，请先登录。', 'data': None, 'status': 0, 'code': None}
+2019-04-02 15:14:54,305-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第2条用例：登录
+2019-04-02 15:14:54,655-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '登录成功', 'data': None, 'status': 1, 'code': '10001'}
+2019-04-02 15:14:54,656-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第3条用例：登录充值
+2019-04-02 15:14:55,499-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '充值成功', 'data': {'pwd': 'E10ADC3949BA59ABBE56E057F20F883E', 'regtime': '2019-03-11 11:27:14.0', 'type': '1', 'regname': '小蜜蜂', 'mobilephone': '13387654333', 'id': 1123539, 'leaveamount': '1100.00'}, 'status': 1, 'code': '10001'}
+2019-04-02 15:14:55,501-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第4条用例：充值账号为空
+2019-04-02 15:14:55,794-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号不能为空', 'data': None, 'status': 0, 'code': '20103'}
+2019-04-02 15:14:55,795-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第5条用例：充值金额为空
+2019-04-02 15:14:56,103-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '请输入金额', 'data': None, 'status': 0, 'code': '20115'}
+2019-04-02 15:14:56,105-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第6条用例：充值金额大于50w
+2019-04-02 15:14:56,403-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '请输入范围在0到50万之间的正数金额', 'data': None, 'status': 0, 'code': '20117'}
+2019-04-02 15:14:56,405-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第1条用例：正确登录
+2019-04-02 15:14:56,696-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '登录成功', 'data': None, 'status': 1, 'code': '10001'}
+2019-04-02 15:14:56,697-INFO-log_msg.py-root-34-日志信息：=====正在测试add_loan模块里面第2条用例：加标
+2019-04-02 15:14:57,258-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '加标成功', 'data': None, 'status': 1, 'code': '10001'}
+2019-04-02 15:14:57,259-INFO-log_msg.py-root-34-日志信息：=====正在测试audit模块里面第3条用例：审核至4状态
+2019-04-02 15:14:57,552-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '更新状态成功：竞标开始，当前标为竞标中状态', 'data': None, 'status': 1, 'code': '10001'}
+2019-04-02 15:14:57,553-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第1条用例：正确登录
+2019-04-02 15:14:57,871-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第2条用例：正常投资
+2019-04-02 15:14:58,762-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第3条用例：不输入金额
