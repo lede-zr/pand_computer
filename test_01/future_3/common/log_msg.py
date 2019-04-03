@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import logging
-from future_3.common.configrue_msg import ReadConfig
-from future_3.common import project_path
+from test_01.future_3.common.configrue_msg import ReadConfig
+from test_01.future_3.common import project_path
 
 
 class MyLog:

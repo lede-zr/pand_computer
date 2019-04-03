@@ -6,8 +6,8 @@
 
 import unittest
 import HTMLTestRunnerNew
-from future_3.test_cases import register_cases,recharge_cases,loan_cases,invest_cases
-from future_3.common import project_path
+from test_01.future_3.test_cases import register_cases,recharge_cases,loan_cases,invest_cases
+from test_01.future_3.common import project_path
 import sys
 sys.path.append('./')
 

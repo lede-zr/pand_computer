@@ -5,8 +5,8 @@
 #@File : do_mysql.py.py
 
 from mysql import connector
-from future_3.common.configrue_msg import ReadConfig
-from future_3.common import project_path
+from test_01.future_3.common.configrue_msg import ReadConfig
+from test_01.future_3.common import project_path
 class DoMysql:
     def mysql(self,query,falg=1):
         '''

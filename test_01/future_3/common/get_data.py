@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from future_3.common.configrue_msg import ReadConfig
-from future_3.common import project_path
+from test_01.future_3.common.configrue_msg import ReadConfig
+from test_01.future_3.common import project_path
 import re
 config = ReadConfig(project_path.conf_path)
 
