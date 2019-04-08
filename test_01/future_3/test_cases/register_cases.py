@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from test_01.future_3.common.do_excel import DoExcel
-from test_01.future_3.common.http_request import HttpRequest
-from test_01.future_3.common.log_msg import MyLog
-from test_01.future_3.common import project_path
+from future_3.common.do_excel import DoExcel
+from future_3.common.http_request import HttpRequest
+from future_3.common.log_msg import MyLog
+from future_3.common import project_path
 import unittest
 import json
 from ddt import ddt, data, unpack

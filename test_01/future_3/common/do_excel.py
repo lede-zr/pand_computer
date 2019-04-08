@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 from openpyxl import load_workbook
-from test_01.future_3.common import project_path
-from test_01.future_3.common.configrue_msg import ReadConfig
+from future_3.common import project_path
+from future_3.common.configrue_msg import ReadConfig
 
 class DoExcel:
     '''该类完成测试数据的读取，测试数据的写回'''
