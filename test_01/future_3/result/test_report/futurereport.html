@@ -116,19 +116,19 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">FutureIoan测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> zr</p>
-<p class='attribute'><strong>开始时间 : </strong> 2019-04-08 11:39:11</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:08.133768</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 22，通过 21，失败 1，通过率= 95.45%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2019-04-08 14:25:08</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:03.592987</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 3，错误 3，通过率= 0.00%</p>
 
 <p class='description'>login</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 95.45% }</a>
-<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 1 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 21 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 22 }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 0.00% }</a>
+<a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 0 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 3 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,49 +148,36 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='failClass warning'>
-    <td>future_3.test_cases.register_cases.Register</td>
-    <td class="text-center">10</td>
-    <td class="text-center">9</td>
-    <td class="text-center">1</td>
+<tr class='errorClass warning'>
+    <td>future_3.test_cases.invest_cases.Invest</td>
+    <td class="text-center">3</td>
     <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',10)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center">0</td>
+    <td class="text-center">3</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',3)" class="detail" id='c1'>详细</a></td>
 </tr>
 
 <tr id='ft1_1' class='none'>
-    <td class='failCase'><div class='testcase'>test_register_01: dict() -> new empty dictionary</div></td>
+    <td class='errorCase'><div class='testcase'>test_invest_1: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
     <div id='div_ft1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>失败</button>
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
     <div id='div_ft1_1' class="collapse in" align="left">
     <pre>
     
-ft1_1: 2019-04-08 11:39:11,614-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第1条用例：正确注册
-2019-04-08 11:39:11,685-ERROR-log_msg.py-root-38-日志信息：{'msg': '注册成功', 'data': None, 'code': '10001', 'status': 1} != {'msg': '手机号码已被注册', 'data': None, 'code': '20110', 'status': 0}
-- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
-?             ---                           --             ^
-
-+ {'code': '20110', 'data': None, 'msg': '手机号码已被注册', 'status': 0}
-?           +++                           ++++++               ^
-
-2019-04-08 11:39:11,903-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号码已被注册', 'data': None, 'code': '20110', 'status': 0}
+ft1_1: 2019-04-08 14:25:08,366-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第1条用例：正确登录
+get请求出错了：HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/login?mobilephone=13387654333&amp;pwd=123456 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000000057A5828&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
 Traceback (most recent call last):
   File "D:\Python34\lib\site-packages\ddt.py", line 145, in wrapper
     return func(self, *args, **kwargs)
-  File ".\future_3\test_cases\register_cases.py", line 44, in test_register
-    raise e
-  File ".\future_3\test_cases\register_cases.py", line 36, in test_register
-    self.assertEqual(expect, resp.json())
-AssertionError: {'msg': '注册成功', 'data': None, 'code': '10001', 'status': 1} != {'msg': '手机号码已被注册', 'data': None, 'code': '20110', 'status': 0}
-- {'code': '10001', 'data': None, 'msg': '注册成功', 'status': 1}
-?             ---                           --             ^
-
-+ {'code': '20110', 'data': None, 'msg': '手机号码已被注册', 'status': 0}
-?           +++                           ++++++               ^
-
+  File ".\future_3\test_cases\invest_cases.py", line 46, in test_invest
+    resp = HttpRequest().http_request(method, url, param, getattr(GetData, 'COOKIE'))
+  File ".\future_3\common\http_request.py", line 31, in http_request
+    return resp
+NameError: name 'resp' is not defined
 
 
     </pre>
@@ -198,19 +185,27 @@ AssertionError: {'msg': '注册成功', 'data': None, 'code': '10001', 'status':
     </td>
 </tr>
 
-<tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_02: dict() -> new empty dictionary</div></td>
+<tr id='ft1_2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_2: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse">  -->
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
-    <div id='div_pt1_2' class="collapse in" align="left">
+    <button id='btn_ft1_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_2'>错误</button>
+    <div id='div_ft1_2' class="collapse in" align="left">
     <pre>
     
-pt1_2: 2019-04-08 11:39:12,005-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第2条用例：错误的手机号
-2019-04-08 11:39:12,285-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号码格式不正确', 'data': None, 'code': '20109', 'status': 0}
+ft1_2: 2019-04-08 14:25:09,484-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第2条用例：正常投资
+get请求出错了：HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/bidLoan?password=123456&amp;loanId=19575&amp;memberId=1123539&amp;amount=100 (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x0000000005863390&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+Traceback (most recent call last):
+  File "D:\Python34\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File ".\future_3\test_cases\invest_cases.py", line 46, in test_invest
+    resp = HttpRequest().http_request(method, url, param, getattr(GetData, 'COOKIE'))
+  File ".\future_3\common\http_request.py", line 31, in http_request
+    return resp
+NameError: name 'resp' is not defined
 
 
     </pre>
@@ -218,423 +213,27 @@ pt1_2: 2019-04-08 11:39:12,005-INFO-log_msg.py-root-34-日志信息：=====正�
     </td>
 </tr>
 
-<tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_03: dict() -> new empty dictionary</div></td>
+<tr id='ft1_3' class='none'>
+    <td class='errorCase'><div class='testcase'>test_invest_3: dict() -> new empty dictionary</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse">  -->
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
-    <div id='div_pt1_3' class="collapse in" align="left">
+    <button id='btn_ft1_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_3'>错误</button>
+    <div id='div_ft1_3' class="collapse in" align="left">
     <pre>
     
-pt1_3: 2019-04-08 11:39:12,287-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第3条用例：错误的密码
-2019-04-08 11:39:12,567-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '密码长度必须为6~18', 'data': None, 'code': '20108', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_04: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
-    <div id='div_pt1_4' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
-    <div id='div_pt1_4' class="collapse in" align="left">
-    <pre>
-    
-pt1_4: 2019-04-08 11:39:12,569-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第4条用例：已注册的手机号
-2019-04-08 11:39:12,880-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号码已被注册', 'data': None, 'code': '20110', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_05: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
-    <div id='div_pt1_5' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
-    <div id='div_pt1_5' class="collapse in" align="left">
-    <pre>
-    
-pt1_5: 2019-04-08 11:39:12,881-INFO-log_msg.py-root-34-日志信息：=====正在测试register模块里面第5条用例：手机号为空
-2019-04-08 11:39:13,186-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号不能为空', 'data': None, 'code': '20103', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_06: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
-    <div id='div_pt1_6' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
-    <div id='div_pt1_6' class="collapse in" align="left">
-    <pre>
-    
-pt1_6: 2019-04-08 11:39:13,188-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第6条用例：正确登录
-2019-04-08 11:39:13,467-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '登录成功', 'data': None, 'code': '10001', 'status': 1}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_07: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
-    <div id='div_pt1_7' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
-    <div id='div_pt1_7' class="collapse in" align="left">
-    <pre>
-    
-pt1_7: 2019-04-08 11:39:13,469-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第7条用例：错误的用户名
-2019-04-08 11:39:13,756-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '用户名或密码错误', 'data': None, 'code': '20111', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_08: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
-    <div id='div_pt1_8' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
-    <div id='div_pt1_8' class="collapse in" align="left">
-    <pre>
-    
-pt1_8: 2019-04-08 11:39:13,758-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第8条用例：错误的密码
-2019-04-08 11:39:14,083-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '用户名或密码错误', 'data': None, 'code': '20111', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_9' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_09: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
-    <div id='div_pt1_9' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_9' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_9'>通过</button>
-    <div id='div_pt1_9' class="collapse in" align="left">
-    <pre>
-    
-pt1_9: 2019-04-08 11:39:14,085-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第9条用例：空密码
-2019-04-08 11:39:14,371-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '密码不能为空', 'data': None, 'code': '20103', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_10' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_10: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
-    <div id='div_pt1_10' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_10' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_10'>通过</button>
-    <div id='div_pt1_10' class="collapse in" align="left">
-    <pre>
-    
-pt1_10: 2019-04-08 11:39:14,372-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第10条用例：空用户名
-2019-04-08 11:39:14,668-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号不能为空', 'data': None, 'code': '20103', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>future_3.test_cases.recharge_cases.Recharge</td>
-    <td class="text-center">6</td>
-    <td class="text-center">6</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c2',6)" class="detail" id='c2'>详细</a></td>
-</tr>
-
-<tr id='pt2_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_recharge_1: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse in" align="left">
-    <pre>
-    
-pt2_1: 2019-04-08 11:39:14,669-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第1条用例：未登录充值
-2019-04-08 11:39:14,994-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '抱歉，请先登录。', 'data': None, 'code': None, 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_recharge_2: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
-    <div id='div_pt2_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_2'>通过</button>
-    <div id='div_pt2_2' class="collapse in" align="left">
-    <pre>
-    
-pt2_2: 2019-04-08 11:39:14,995-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第2条用例：登录
-2019-04-08 11:39:15,290-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '登录成功', 'data': None, 'code': '10001', 'status': 1}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_recharge_3: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
-    <div id='div_pt2_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_3'>通过</button>
-    <div id='div_pt2_3' class="collapse in" align="left">
-    <pre>
-    
-pt2_3: 2019-04-08 11:39:15,291-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第3条用例：登录充值
-2019-04-08 11:39:16,122-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '充值成功', 'data': {'regname': '小蜜蜂', 'leaveamount': '1100.00', 'type': '1', 'id': 1123539, 'mobilephone': '13387654333', 'regtime': '2019-03-11 11:27:14.0', 'pwd': 'E10ADC3949BA59ABBE56E057F20F883E'}, 'code': '10001', 'status': 1}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_recharge_4: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
-    <div id='div_pt2_4' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_4' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_4'>通过</button>
-    <div id='div_pt2_4' class="collapse in" align="left">
-    <pre>
-    
-pt2_4: 2019-04-08 11:39:16,124-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第4条用例：充值账号为空
-2019-04-08 11:39:16,402-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '手机号不能为空', 'data': None, 'code': '20103', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_recharge_5: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
-    <div id='div_pt2_5' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_5' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_5'>通过</button>
-    <div id='div_pt2_5' class="collapse in" align="left">
-    <pre>
-    
-pt2_5: 2019-04-08 11:39:16,404-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第5条用例：充值金额为空
-2019-04-08 11:39:16,677-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '请输入金额', 'data': None, 'code': '20115', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt2_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_recharge_6: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
-    <div id='div_pt2_6' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_6' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_6'>通过</button>
-    <div id='div_pt2_6' class="collapse in" align="left">
-    <pre>
-    
-pt2_6: 2019-04-08 11:39:16,679-INFO-log_msg.py-root-34-日志信息：=====正在测试recharge模块里面第6条用例：充值金额大于50w
-2019-04-08 11:39:16,966-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '请输入范围在0到50万之间的正数金额', 'data': None, 'code': '20117', 'status': 0}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>future_3.test_cases.loan_cases.Loan</td>
-    <td class="text-center">3</td>
-    <td class="text-center">3</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c3',3)" class="detail" id='c3'>详细</a></td>
-</tr>
-
-<tr id='pt3_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_loan_1: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse in" align="left">
-    <pre>
-    
-pt3_1: 2019-04-08 11:39:16,967-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第1条用例：正确登录
-2019-04-08 11:39:17,247-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '登录成功', 'data': None, 'code': '10001', 'status': 1}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_loan_2: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
-    <div id='div_pt3_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_2'>通过</button>
-    <div id='div_pt3_2' class="collapse in" align="left">
-    <pre>
-    
-pt3_2: 2019-04-08 11:39:17,249-INFO-log_msg.py-root-34-日志信息：=====正在测试add_loan模块里面第2条用例：加标
-2019-04-08 11:39:17,858-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '加标成功', 'data': None, 'code': '10001', 'status': 1}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt3_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_loan_3: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
-    <div id='div_pt3_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_3'>通过</button>
-    <div id='div_pt3_3' class="collapse in" align="left">
-    <pre>
-    
-pt3_3: 2019-04-08 11:39:17,859-INFO-log_msg.py-root-34-日志信息：=====正在测试audit模块里面第3条用例：审核至4状态
-2019-04-08 11:39:18,282-INFO-log_msg.py-root-34-日志信息：实际结果：{'msg': '更新状态成功：竞标开始，当前标为竞标中状态', 'data': None, 'code': '10001', 'status': 1}
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr class='passClass warning'>
-    <td>future_3.test_cases.invest_cases.Invest</td>
-    <td class="text-center">3</td>
-    <td class="text-center">3</td>
-    <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c4',3)" class="detail" id='c4'>详细</a></td>
-</tr>
-
-<tr id='pt4_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_invest_1: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
-    <div id='div_pt4_1' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
-    <div id='div_pt4_1' class="collapse in" align="left">
-    <pre>
-    
-pt4_1: 2019-04-08 11:39:18,283-INFO-log_msg.py-root-34-日志信息：=====正在测试login模块里面第1条用例：正确登录
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_invest_2: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
-    <div id='div_pt4_2' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_2' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_2'>通过</button>
-    <div id='div_pt4_2' class="collapse in" align="left">
-    <pre>
-    
-pt4_2: 2019-04-08 11:39:18,600-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第2条用例：正常投资
-
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt4_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_invest_3: dict() -> new empty dictionary</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
-    <div id='div_pt4_3' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_3' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_3'>通过</button>
-    <div id='div_pt4_3' class="collapse in" align="left">
-    <pre>
-    
-pt4_3: 2019-04-08 11:39:19,467-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第3条用例：不输入金额
+ft1_3: 2019-04-08 14:25:10,855-INFO-log_msg.py-root-34-日志信息：=====正在测试Invets模块里面第3条用例：不输入金额
+get请求出错了：HTTPConnectionPool(host='47.107.168.87', port=8080): Max retries exceeded with url: /futureloan/mvc/api/member/bidLoan?password=123456&amp;loanId=19575&amp;memberId=1123539&amp;amount= (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x00000000057A57F0&gt;: Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',))
+Traceback (most recent call last):
+  File "D:\Python34\lib\site-packages\ddt.py", line 145, in wrapper
+    return func(self, *args, **kwargs)
+  File ".\future_3\test_cases\invest_cases.py", line 46, in test_invest
+    resp = HttpRequest().http_request(method, url, param, getattr(GetData, 'COOKIE'))
+  File ".\future_3\common\http_request.py", line 31, in http_request
+    return resp
+NameError: name 'resp' is not defined
 
 
     </pre>
@@ -644,11 +243,11 @@ pt4_3: 2019-04-08 11:39:19,467-INFO-log_msg.py-root-34-日志信息：=====正�
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>22</td>
-    <td>21</td>
-    <td>1</td>
+    <td>3</td>
     <td>0</td>
-    <td>通过率：95.45%</td>
+    <td>0</td>
+    <td>3</td>
+    <td>通过率：0.00%</td>
 </tr>
 </table>
 
