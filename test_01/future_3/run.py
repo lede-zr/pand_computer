@@ -4,12 +4,12 @@
 # @Email : 429082323@qq.com
 # @File : run.py.py
 
+import sys
+sys.path.append('./')
 import unittest
 import HTMLTestRunnerNew
 from future_3.test_cases import register_cases,recharge_cases,loan_cases,invest_cases
 from future_3.common import project_path
-import sys
-sys.path.append('./')
 
 suite = unittest.TestSuite()  # 新建测试集
 loader = unittest.TestLoader()  # 用例收集器
